@@ -6,11 +6,24 @@
 ### 1. Autoren, Versionierung des Dokumentes
 
 ### 2. Einfuehrung
-- Beschreibung: Welche Funktionen wird der Service erfuellen
+#### **2.1 Was kann die Software**
+Webmin ist ein
+
+#### 2.2 **Vorgesehener Zeitaufwand**
+
+#### 2.3 **Mögliche Risiken**
+Das grösste Risiko/Gefahr ist für uns das Versagen der Hardware, einerseit, wissen wir nicht in welchen zustand sich der Raspberry Pi befindet. Aus Erfahrung können wir auch sagen, dass das Netzwerk nicht immer Stabil ist, dies kann auch noch zu Problemen führen.
+
+
+
 - Vorgesehener Zeitaufwand für die Realisierung
 - Stolpersteine
 
 ### 3. Benoetigte Hard- und Software
+| Material | Funktionalität |
+| -------- | -------------- |
+| Raspberry | Die 
+
 - Hardware (Materialliste, Funktionalitaet)
 - Software (Anforderungen, Firmware, OS-Image, ergaenzende SW-Packages, Abhängigkeiten, Funktionalitaet)
 

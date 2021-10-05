@@ -116,6 +116,42 @@ Nun erstellen wir das Extra Modul Useradmin, damit wir Benutzer erstellen und ve
 Das installieren von Modulen ist sehr einfach. Das Modul “useradmin” kann man so installieren:
 <img src="install.jpg" alt="Girl in a jacket">
 
+#### **4.3 Installationsanleitung (für die Lernenden)**
+Die Installation von Webmin erfolgt über die Kommandozeile und ist relativ einfach zu erledigen.
+
+Installieren sie folgende Packages:
+````libnet-ssleay-perl libio-socket-ssl-perl````
+ 
+Wenn diese Installiert sind, gehen sie auf die Webseite von Sourceforge und suchen sie nach der neuesten minimalen Version.
+````https://sourceforge.net/projects/webadmin````
+
+Zum Zeitpunkt der Erstellung dieser Dokumentation war *1.973* die neueste Version.
+
+Danach wechseln wir das Verzeichnis und laden Webmin mit dieser URL herunter:
+````cd````
+
+````http://prdownloads.sourceforge.net/webadmin/webmin-1.973-minimal.tar.gz````
+ 
+Das Tar Archiv dass wir nun heruntergeladen haben, entpacken wir mit folgendem Command. *TIPP: TAR Googlen*
+
+Jetzt wechseln wir in das Verzeichnis von Webmin und führen die Installation durch mit folgendem Command durch.
+
+````sudo ./setup.sh````
+ 
+Nun startet die Installation im Shell, diese kann man einfach nach den Vorgaben durchführen. 
+*Wichtig: Die letzte Frage mit "JA" beantworten, damit Webmin beim Start auch mit aufstartet.*
+ 
+Danach gehen wir auf den Browser ihrer Wahl und auf unseren Server + den Port 10'000.
+
+##### Installieren von extra Modulen
+Nun erstellen wir das Extra Modul Useradmin, damit wir Benutzer erstellen und verwalten können. Für die Installation geht man zu Webmin Modules.
+<img src="webmin_modules.jpg" alt="Girl in a jacket">
+
+Das installieren von Modulen ist sehr einfach.
+Suchen sie im neuen Fenster nach dem Modul Useradmin und installieren sie dieses.
+
+Fertig nun haben sie schon das Modul useradmin auf ihrem Webmin installiert. Jetzt haben sie ein Tool mit dem sie User erstellen, verwalten und konfigurieren.
+
 ### 5. **Qualitaetskontrolle**
 **Status von Webmin Prüfen:**
 <br> ````sudo service webmin````

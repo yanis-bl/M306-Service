@@ -15,7 +15,7 @@
       - [4.1 **Installationsanleitung (für die Lehrperson)**](#41-installationsanleitung-für-die-lehrperson)
       - [4.2 **Installationsanleitung (für die Lehrperson)**](#42-installationsanleitung-für-die-lehrperson)
         - [Installieren von extra Modulen](#installieren-von-extra-modulen)
-    - [5. **Qualitaetskontrolle (Pruefen der Funktionalitaet mit Ablauf von Kommandos und entsprechenden Outputs)**](#5-qualitaetskontrolle-pruefen-der-funktionalitaet-mit-ablauf-von-kommandos-und-entsprechenden-outputs)
+    - [5. **Qualitaetskontrolle**](#5-qualitaetskontrolle)
     - [6. **Error-Handling**](#6-error-handling)
     - [7. **Quellen**](#7-quellen)
     - [8. **OpenSource Lizenz**](#8-opensource-lizenz)
@@ -116,7 +116,18 @@ Nun erstellen wir das Extra Modul Useradmin, damit wir Benutzer erstellen und ve
 Das installieren von Modulen ist sehr einfach. Das Modul “useradmin” kann man so installieren:
 <img src="install.jpg" alt="Girl in a jacket">
 
-### 5. **Qualitaetskontrolle (Pruefen der Funktionalitaet mit Ablauf von Kommandos und entsprechenden Outputs)**
+### 5. **Qualitaetskontrolle**
+**Status von Webmin Prüfen:**
+<br> ````sudo service webmin````
+
+**Webmin starten/restarten**
+<br> ````sudo/etc/webmin/start````
+
+**sudo service**
+<br> ````webmin restart````
+
+**Webmin Stoppen**
+<br> ````sudo service webmin stop````
 
 ### 6. **Error-Handling**
 Bei der Installation hatten wir keine Probleme.

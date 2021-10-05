@@ -13,8 +13,9 @@
     - [3. **Benoetigte Hard- und Software**](#3-benoetigte-hard--und-software)
     - [4 **Installationsanleitungen**](#4-installationsanleitungen)
       - [4.1 **Installationsanleitung (für die Lehrperson)**](#41-installationsanleitung-für-die-lehrperson)
-      - [4.2 **Installationsanleitung (für die Lehrperson)**](#42-installationsanleitung-für-die-lehrperson)
         - [Installieren von extra Modulen](#installieren-von-extra-modulen)
+      - [**4.2 Installationsanleitung (für die Lernenden)**](#42-installationsanleitung-für-die-lernenden)
+        - [Installieren von extra Modulen](#installieren-von-extra-modulen-1)
     - [5. **Qualitaetskontrolle**](#5-qualitaetskontrolle)
     - [6. **Error-Handling**](#6-error-handling)
     - [7. **Quellen**](#7-quellen)
@@ -48,38 +49,7 @@ Die benötigte Software, welche wir genutzt haben, sind VNC und ein ISO-File fü
         
 
 ### 4 **Installationsanleitungen**
-
 #### 4.1 **Installationsanleitung (für die Lehrperson)**
-Die Installation von Webmin erfolgt über die Kommandozeile und ist relativ einfach zu erledigen. Als aller erstes führen wir diesen Befehl aus:
-````sudo apt-get install libnet-ssleay-perl libio-socket-ssl-perl````
- 
-Danach gehen wir auf die folgende Webseite
-
-````https://sourceforge.net/projects/webadmin/files/webmin````
-
-und suchen uns die neueste Version der minimale Version.
-Zu meinem Zeitpunkt war die neueste Version 1.973. 
-Im Command einfach die neueste Version einsetzen.
-
-````cd````
-
-````wget http://prdownloads.sourceforge.net/webadmin/webmin-1.973-minimal.tar.gz````
- 
-Das Tar Archiv dass wir nun heruntergeladen haben, entpacken wir mit folgendem Command.
-
-````tar-zxvf webmin-1.973-minimal.tar.gz````
-
-Jetzt wechseln wir in das Verzeichnis von Webmin und führen die Installation durch.
-
-````cd webmin-1.973````
-````sudo ./setup.sh````
- 
-Nun kommen im Shell ein paar Fragen die man alle auf Default lassen kann. Das Passwort muss man natürlich setzen. Nachdem die Installation fertig ist kann man die letzte Frage noch mit “Y” bestätigen damit Webmin automatisch beim start des Systems startet.
- 
-Mit diesen Daten kommt man auf die Webmin Webpage:
-````http://hostname:10000/````
-
-#### 4.2 **Installationsanleitung (für die Lehrperson)**
 Die Installation von Webmin erfolgt über die Kommandozeile und ist relativ einfach zu erledigen. Als aller erstes führen wir diesen Befehl aus:
 ````sudo apt-get install libnet-ssleay-perl libio-socket-ssl-perl````
  
@@ -116,7 +86,7 @@ Nun erstellen wir das Extra Modul Useradmin, damit wir Benutzer erstellen und ve
 Das installieren von Modulen ist sehr einfach. Das Modul “useradmin” kann man so installieren:
 <img src="install.jpg" alt="Girl in a jacket">
 
-#### **4.3 Installationsanleitung (für die Lernenden)**
+#### **4.2 Installationsanleitung (für die Lernenden)**
 Die Installation von Webmin erfolgt über die Kommandozeile und ist relativ einfach zu erledigen.
 
 Installieren sie folgende Packages:

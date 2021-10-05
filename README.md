@@ -1,19 +1,19 @@
 # M306-Service
 # Werkstattauftrag W07-Webmin
 
-## Inhaltsverzeichnis:
+# Inhaltsverzeichnis:
 - [M306-Service](#m306-service)
 - [Werkstattauftrag W07-Webmin](#werkstattauftrag-w07-webmin)
-  - [Inhaltsverzeichnis:](#inhaltsverzeichnis)
+- [Inhaltsverzeichnis:](#inhaltsverzeichnis)
     - [1. **Autoren, Versionierung des Dokumentes**](#1-autoren-versionierung-des-dokumentes)
     - [2. **Einfuehrung**](#2-einfuehrung)
       - [2.1 **Was kann die Software**](#21-was-kann-die-software)
       - [2.2 **Vorgesehener Zeitaufwand**](#22-vorgesehener-zeitaufwand)
       - [2.3 **Mögliche Risiken und Stolpersteine**](#23-mögliche-risiken-und-stolpersteine)
-      - [3. **Benoetigte Hard- und Software**](#3-benoetigte-hard--und-software)
-  - [4 **Installationsanleitungen**](#4-installationsanleitungen)
-    - [4.1 **Installationsanleitung (für die Lehrperson)**](#41-installationsanleitung-für-die-lehrperson)
-    - [4.2 **Installationsanleitung (für die Lehrperson)**](#42-installationsanleitung-für-die-lehrperson)
+    - [3. **Benoetigte Hard- und Software**](#3-benoetigte-hard--und-software)
+    - [4 **Installationsanleitungen**](#4-installationsanleitungen)
+      - [4.1 **Installationsanleitung (für die Lehrperson)**](#41-installationsanleitung-für-die-lehrperson)
+      - [4.2 **Installationsanleitung (für die Lehrperson)**](#42-installationsanleitung-für-die-lehrperson)
         - [Installieren von extra Modulen](#installieren-von-extra-modulen)
     - [5. **Qualitaetskontrolle (Pruefen der Funktionalitaet mit Ablauf von Kommandos und entsprechenden Outputs)**](#5-qualitaetskontrolle-pruefen-der-funktionalitaet-mit-ablauf-von-kommandos-und-entsprechenden-outputs)
     - [6. **Error-Handling**](#6-error-handling)
@@ -36,7 +36,7 @@ Unser Zeitbudget ist auf 7 Lektion beschränkt. Unser vorgesehener Zeitaufwand n
 - Was auch zu einen Störungsfaktor werden kann, ist Git und Markdown selber. Wir beide sind relativ neu auf diesem Gebiet un müssen uns selbst noch richtig einarbeiten.
 
 
-#### 3. **Benoetigte Hard- und Software**
+### 3. **Benoetigte Hard- und Software**
 **Hardware:**
 Unsere Wichtigste Hardware ist der Raspberry Pi, auf diesem wird das Webmin installiert und Konfiguriert. Unsere eigene Laptops sind auch noch ein wichtiges Glied unsere Hardware, nachdem auf dem Raspberry Pi VNC installiert ist, brauchen wir keinen zusätzlichen Bildschirm mehr und wir können von unseren eigenen Notebooks den Raspberry Pi fernverwalten.
 <br> 1x HDMI auf MikroHDMI stecker
@@ -47,9 +47,9 @@ Die benötigte Software, welche wir genutzt haben, sind VNC und ein ISO-File fü
     <br>VNC, Virtual Network Computing,  ist eine Software, die den Bildschirminhalt eines entfernten Rechners auf einem lokalen Rechner anzeigt und im Gegenzug Tastatur- und Mausbewegungen des lokalen Rechners an den entfernten Rechner sendet
         
 
-## 4 **Installationsanleitungen**
+### 4 **Installationsanleitungen**
 
-### 4.1 **Installationsanleitung (für die Lehrperson)**
+#### 4.1 **Installationsanleitung (für die Lehrperson)**
 Die Installation von Webmin erfolgt über die Kommandozeile und ist relativ einfach zu erledigen. Als aller erstes führen wir diesen Befehl aus:
 ````sudo apt-get install libnet-ssleay-perl libio-socket-ssl-perl````
  
@@ -79,7 +79,7 @@ Nun kommen im Shell ein paar Fragen die man alle auf Default lassen kann. Das Pa
 Mit diesen Daten kommt man auf die Webmin Webpage:
 ````http://hostname:10000/````
 
-### 4.2 **Installationsanleitung (für die Lehrperson)**
+#### 4.2 **Installationsanleitung (für die Lehrperson)**
 Die Installation von Webmin erfolgt über die Kommandozeile und ist relativ einfach zu erledigen. Als aller erstes führen wir diesen Befehl aus:
 ````sudo apt-get install libnet-ssleay-perl libio-socket-ssl-perl````
  

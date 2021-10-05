@@ -2,10 +2,29 @@
 # Werkstattauftrag W07-Webmin
 
 ## Inhaltsverzeichnis:
+- [M306-Service](#m306-service)
+- [Werkstattauftrag W07-Webmin](#werkstattauftrag-w07-webmin)
+  - [Inhaltsverzeichnis:](#inhaltsverzeichnis)
+    - [1. **Autoren, Versionierung des Dokumentes**](#1-autoren-versionierung-des-dokumentes)
+    - [2. **Einfuehrung**](#2-einfuehrung)
+      - [2.1 **Was kann die Software**](#21-was-kann-die-software)
+      - [2.2 **Vorgesehener Zeitaufwand**](#22-vorgesehener-zeitaufwand)
+      - [2.3 **Mögliche Risiken und Stolpersteine**](#23-mögliche-risiken-und-stolpersteine)
+      - [3. **Benoetigte Hard- und Software**](#3-benoetigte-hard--und-software)
+  - [4 **Installationsanleitungen**](#4-installationsanleitungen)
+    - [4.1 **Installationsanleitung (für die Lehrperson)**](#41-installationsanleitung-für-die-lehrperson)
+    - [4.2 **Installationsanleitung (für die Lehrperson)**](#42-installationsanleitung-für-die-lehrperson)
+        - [Installieren von extra Modulen](#installieren-von-extra-modulen)
+    - [5. **Qualitaetskontrolle (Pruefen der Funktionalitaet mit Ablauf von Kommandos und entsprechenden Outputs)**](#5-qualitaetskontrolle-pruefen-der-funktionalitaet-mit-ablauf-von-kommandos-und-entsprechenden-outputs)
+    - [6. **Error-Handling**](#6-error-handling)
+    - [7. **Quellen**](#7-quellen)
+    - [8. **OpenSource Lizenz**](#8-opensource-lizenz)
 
-### 1. Autoren, Versionierung des Dokumentes
+### 1. **Autoren, Versionierung des Dokumentes**
+Verison 1.0; 28.09.2021; Joel Koch & Yanis Blust
+<br> Version 1.1; 5.10.2021; Joel Koch & Yanis Blust
 
-### 2. Einfuehrung
+### 2. **Einfuehrung**
 #### 2.1 **Was kann die Software**
 Webmin ist ein Werkzeug/Software mit dem man ein Linux Server mit einem Browser verwalten kann. So kann man in Webmin verschiedene Module installieren mit denen man dann z.B die User verwalten kann. Auch kann man verschiedene Server Daemons konfigurieren wie z. B einen Apache Webserver oder DNS.
 
@@ -25,16 +44,12 @@ Unsere Wichtigste Hardware ist der Raspberry Pi, auf diesem wird das Webmin inst
 
 **Software:**
 Die benötigte Software, welche wir genutzt haben, sind VNC und ein ISO-File für das Raspberry Pi OS. 
-    <br>VNC, Virtual Network Computing,  ist eine Software, die den Bildschirminhalt eines entfernten Rechners auf einem lokalen Rechner anzeigt und im Gegenzug Tastatur- und Mausbewegungen des lokalen Rechners an den entfernten Rechner sendet <br>
+    <br>VNC, Virtual Network Computing,  ist eine Software, die den Bildschirminhalt eines entfernten Rechners auf einem lokalen Rechner anzeigt und im Gegenzug Tastatur- und Mausbewegungen des lokalen Rechners an den entfernten Rechner sendet
         
 
+## 4 **Installationsanleitungen**
 
-
-- Hardware (Materialliste, Funktionalitaet)
-- Software (Anforderungen, Firmware, OS-Image, ergaenzende SW-Packages, Abhängigkeiten, Funktionalitaet)
-
-### 4. Installationsanleitung (Didaktisch reduzierte Anleitung. Lernende sollen eine eigene Lösungswege realisieren)
-### 4. Installationsanleitung (für die Lehrperson)
+### 4.1 **Installationsanleitung (für die Lehrperson)**
 Die Installation von Webmin erfolgt über die Kommandozeile und ist relativ einfach zu erledigen. Als aller erstes führen wir diesen Befehl aus:
 ````sudo apt-get install libnet-ssleay-perl libio-socket-ssl-perl````
  
@@ -63,18 +78,53 @@ Nun kommen im Shell ein paar Fragen die man alle auf Default lassen kann. Das Pa
  
 Mit diesen Daten kommt man auf die Webmin Webpage:
 ````http://hostname:10000/````
-- Anweisungen verstaendlich und nachvollziehbar
-- Keine fertigen Loesungsschritte aufzeigen
-- Hilfestellung (Tipps, Quellen...)
 
-### 5. Qualitaetskontrolle (Pruefen der Funktionalitaet mit Ablauf von Kommandos und entsprechenden Outputs)
+### 4.2 **Installationsanleitung (für die Lehrperson)**
+Die Installation von Webmin erfolgt über die Kommandozeile und ist relativ einfach zu erledigen. Als aller erstes führen wir diesen Befehl aus:
+````sudo apt-get install libnet-ssleay-perl libio-socket-ssl-perl````
+ 
+Danach gehen wir auf die folgende Webseite
 
-### 6. Error-Handling
+````https://sourceforge.net/projects/webadmin/files/webmin````
+
+und suchen uns die neueste Version der minimale Version.
+Zu meinem Zeitpunkt war die neueste Version 1.973. 
+Im Command einfach die neueste Version einsetzen.
+
+````cd````
+
+````wget http://prdownloads.sourceforge.net/webadmin/webmin-1.973-minimal.tar.gz````
+ 
+Das Tar Archiv dass wir nun heruntergeladen haben, entpacken wir mit folgendem Command.
+
+````tar-zxvf webmin-1.973-minimal.tar.gz````
+
+Jetzt wechseln wir in das Verzeichnis von Webmin und führen die Installation durch.
+
+````cd webmin-1.973````
+````sudo ./setup.sh````
+ 
+Nun kommen im Shell ein paar Fragen die man alle auf Default lassen kann. Das Passwort muss man natürlich setzen. Nachdem die Installation fertig ist kann man die letzte Frage noch mit “Y” bestätigen damit Webmin automatisch beim start des Systems startet.
+ 
+Mit diesen Daten kommt man auf die Webmin Webpage:
+````http://hostname:10000/````
+
+##### Installieren von extra Modulen
+Nun erstellen wir das Extra Modul Useradmin, damit wir Benutzer erstellen und verwalten können. Für die Installation von Modulen geht man von der Homepage aus auf → Webmin Configuration → Webmin Modules.
+<img src="webmin_modules.jpg" alt="Girl in a jacket">
+
+Das installieren von Modulen ist sehr einfach. Das Modul “useradmin” kann man so installieren:
+<img src="install.jpg" alt="Girl in a jacket">
+
+### 5. **Qualitaetskontrolle (Pruefen der Funktionalitaet mit Ablauf von Kommandos und entsprechenden Outputs)**
+
+### 6. **Error-Handling**
 Bei der Installation hatten wir keine Probleme.
 
-### 7. Quellen
+### 7. **Quellen**
 - Eigene Dokumentation aus dem Modul 126.
 - VNC für Raspi: https://www.realvnc.com/de/connect/download/viewer/raspberrypi/
 - Raspberry Pi Os: https://www.raspberrypi.org/software/ 
 
-### 8. OpenSource Lizenz
+### 8. **OpenSource Lizenz**
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />Dieses Werk ist lizenziert unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz</a>.
